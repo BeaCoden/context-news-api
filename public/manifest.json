@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Context News Api",
+  "name": "Context News Api - News from around the world",
   "icons": [
     {
       "src": "favicon.ico",
