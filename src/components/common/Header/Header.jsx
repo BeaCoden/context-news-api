@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
-// import Navbar from "../navbar/Navbar";
+import Navbar from "../navbar/Navbar";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -15,7 +15,9 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      <h1>
+      <h1
+        className={styles.heading}
+        onClick={() => navigate("/")}>
         <em>news</em>
       </h1>
       <div className={styles.top}>
@@ -41,7 +43,7 @@ const Header = () => {
           </div>
         </form>
       </div>
-      {/* <Navbar /> */}
+      <Navbar />
     </div>
   );
 };
