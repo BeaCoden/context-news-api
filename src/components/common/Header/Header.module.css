@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  width: 100%;
+  padding: 20px 10px;
+  background-color: var(--primary-color);
+  border-bottom: 5px solid var(--info-color);
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid var(--info-color);
+}
+
+button {
+  padding: 10px;
+  border: 2px solid var(--info-color);
+  border-radius: 10px;
+  background-color: var(--detail-color);
+  cursor: pointer;
+}
+
+.input-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.search-input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-left: 0;
+}
