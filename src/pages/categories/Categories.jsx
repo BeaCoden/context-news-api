@@ -5,9 +5,11 @@ const Categories = () => {
     <div>
       <h2>Categories</h2>
       <ul>
-        <li>Category 1</li>
-        <li>Category 2</li>
-        <li>Category 3</li>
+        <li>Business</li>
+        <li>Entertainment</li>
+        <li>General</li>
+        <li>Health</li>
+        <li>Science</li>
       </ul>
     </div>
   );
