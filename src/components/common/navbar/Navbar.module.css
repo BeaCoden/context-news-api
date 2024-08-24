@@ -1,0 +1,39 @@
+ .topUL {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 20px;
+}
+
+.topUL li {
+  position: relative;
+}
+
+.topUL li:hover ul {
+ display: block;
+ background-color: var(--primary-color);
+ color: var(--font-color);
+ border: none;
+ box-shadow: 0 0 0.5rem 0.1rem var(--shadow-color);
+ border-radius: 10px;
+ padding: 15px;
+}
+
+.topUL li ul li {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+
+.bottomUL {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
