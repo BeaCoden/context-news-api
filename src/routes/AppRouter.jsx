@@ -6,6 +6,7 @@ import About from "../pages/about/About";
 import Categories from "../pages/categories/Categories";
 import Contact from "../pages/contact/Contact";
 import Search from "../pages/search/Search";
+import Newsletter from "../pages/newsletter/Newsletter";
 
 const AppRouter = () => {
   return (
@@ -32,6 +33,10 @@ const AppRouter = () => {
           <Route
             path="/search"
             element={<Search />}
+          />
+          <Route
+            path="/newsletter"
+            element={<Newsletter />}
           />
         </Routes>
       </BrowserRouter>
