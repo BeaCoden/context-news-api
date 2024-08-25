@@ -4,10 +4,10 @@
   padding: 20px 10px;
   background-color: var(--primary-color);
   border-bottom: 5px solid var(--info-color);
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
 }
 
 .top {

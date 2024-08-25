@@ -20,6 +20,7 @@ const Header = () => {
         onClick={() => navigate("/")}>
         <em>news</em>
       </h1>
+
       <div className={styles.top}>
         <form
           onSubmit={handleSubmit}
