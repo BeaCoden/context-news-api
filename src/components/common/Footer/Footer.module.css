@@ -4,21 +4,17 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--detail-color);
   text-align: center;
   padding: 10px 0;
   z-index: 1000;
   border-top: var(--info-color) 3px solid;
-}
-
-.footer h1 {
-  margin: 0;
-  font-size: 18px;
+  font-size: 0.8rem;
+  color: var(--font-color);
 }
 
 .footer p {
   margin: 5px 0;
-  font-size: 14px;
 }
 
 .footer ul {

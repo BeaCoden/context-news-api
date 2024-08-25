@@ -5,8 +5,9 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <h1>ℹ️</h1>
-      <p>© 2021. All rights reserved</p>
+      <p>
+        <small>© 2021. All rights reserved</small>
+      </p>
       <ul>
         <li>
           <a
