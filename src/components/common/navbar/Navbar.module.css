@@ -8,7 +8,6 @@
 .topUL li {
   position: relative;
   cursor: pointer;
-
 }
 
 .topUL li:hover ul {
@@ -25,7 +24,7 @@
   display: block;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--info-color);
 }
 .bottomUL {
   display: none;
@@ -38,6 +37,9 @@
 }
 
 .bottomUL li {
-
-
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid var(--info-color);
+  cursor: pointer;
 }
