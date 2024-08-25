@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.errorContent {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.errorImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.errorTitle {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+.errorMessage {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.homeLink {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.homeLink:hover {
+  background-color: #0056b3;
+}
