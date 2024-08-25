@@ -7,6 +7,8 @@
 
 .topUL li {
   position: relative;
+  cursor: pointer;
+
 }
 
 .topUL li:hover ul {
@@ -25,9 +27,6 @@
   padding: 10px;
   border-bottom: 1px solid var(--border-color);
 }
-
-
-
 .bottomUL {
   display: none;
   position: absolute;
@@ -36,4 +35,9 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.bottomUL li {
+
+
 }
