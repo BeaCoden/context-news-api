@@ -15,12 +15,16 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
+      {/* <img
+        src="https://via.placeholder.com/150"
+        alt="404 illustration"
+        className={styles.errorImage}
+      /> */}
       <h1
         className={styles.heading}
         onClick={() => navigate("/")}>
         <em>news</em>
       </h1>
-
       <div className={styles.top}>
         <form
           onSubmit={handleSubmit}

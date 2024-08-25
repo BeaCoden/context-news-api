@@ -23,6 +23,11 @@
   cursor: pointer;
 }
 
+.errorImage {
+  width: 100px;
+  height: auto;
+}
+
 form {
   display: flex;
   justify-content: center;
