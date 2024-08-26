@@ -7,6 +7,7 @@ import Categories from "../pages/categories/Categories";
 import Contact from "../pages/contact/Contact";
 import Search from "../pages/search/Search";
 import Newsletter from "../pages/newsletter/Newsletter";
+import Weather from "../pages/weather/Weather";
 
 const AppRouter = () => {
   return (
@@ -37,6 +38,10 @@ const AppRouter = () => {
           <Route
             path="/newsletter"
             element={<Newsletter />}
+          />
+          <Route
+            path="/weather"
+            element={<Weather />}
           />
         </Routes>
       </BrowserRouter>
