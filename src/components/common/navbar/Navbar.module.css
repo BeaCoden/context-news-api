@@ -1,14 +1,14 @@
- .topUL {
+.topUL {
   display: flex;
-  list-style: none;
-  gap: 20px;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--font-color);
-  border: none;
+  list-style: none;
+  background-color: var(--navbar-bg-color);
+  padding: 10px 20px;
   border-radius: 10px;
-  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .topUL li {
   position: relative;
@@ -21,8 +21,14 @@
 }
 
 .topUL li:hover {
-color: var(--info-color);
- }
+ color: var(--info-color);
+}
+
+.topUL li:hover p {
+ color: var(--hover-color);
+ text-decoration: underline;
+}
+
 
 .topUL li:hover .bottomUL {
   display: block;
@@ -37,10 +43,32 @@ color: var(--info-color);
 .bottomUL {
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 100%;
+  transform: translateX(-50%);
   margin: 0;
-  padding: 0;
   list-style: none;
-  color: var(--font-color);
+  background-color: var(--dropdown-bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+
+}
+
+
+.bottomUL li {
+  padding: 10px 20px;
+  color: var(--info-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bottomUL li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bottomUL li:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
 }

@@ -33,5 +33,10 @@ body {
   --detail-color:#d6ccc2;
   --hover-color:#edede9;
   --info-color: #669bbc;
+  --hover-color: #00bcd4; /* Farbe beim Hover */
   --font-color: #0c4f78;
+  --dropdown-bg-color: #004d73; /* Hintergrundfarbe für das Dropdown */
+  --hover-bg-color: #007ba7; /* Hintergrundfarbe beim Hover im Dropdown */
+  --navbar-bg-color: #004d73; /* Hintergrundfarbe der Navbar */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Schattenfarbe */
 }
