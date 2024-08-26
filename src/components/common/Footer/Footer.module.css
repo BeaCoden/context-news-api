@@ -4,13 +4,13 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: var(--detail-color);
+  background-color: var(--footer-bg-color);
   text-align: center;
   padding: 10px 0;
   z-index: 1000;
-  border-top: var(--info-color) 3px solid;
+  border-top: var(--detail-color) 3px solid;
   font-size: 0.8rem;
-  color: var(--font-color);
+  color: var(--footer-font-color);
 }
 
 .footer p {
@@ -30,10 +30,10 @@
 }
 
 .footer a {
-  color: var(--info-color);
+  color: var(--footer-font-color);
   text-decoration: none;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  color: var(--hover-color);
 }

@@ -23,10 +23,10 @@
   cursor: pointer;
 }
 
-.errorImage {
+/* .errorImage {
   width: 100px;
   height: auto;
-}
+} */
 
 form {
   display: flex;
@@ -69,4 +69,22 @@ button {
   top: 0;
   height: 100%;
   border-left: 0;
+}
+
+
+@-webkit-keyframes text-shadow-drop-tl {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes text-shadow-drop-tl {
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
+  }
 }
