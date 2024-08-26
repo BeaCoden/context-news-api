@@ -18,7 +18,12 @@ const Navbar = () => {
             <li onClick={() => navigate("/categories", { state: { category: "science" } })}>Science</li>
           </ul>
         </li>
-        <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>Newsletter</li>
+        <li>
+          <p>Updates</p>
+          <ul className={styles.bottomUL}>
+            <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>Newsletter</li>
+          </ul>
+        </li>
       </ul>
     </div>
   );

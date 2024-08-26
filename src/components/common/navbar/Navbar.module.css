@@ -1,8 +1,13 @@
  .topUL {
   display: flex;
-  justify-content: space-around;
   list-style: none;
   gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--font-color);
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .topUL li {
@@ -10,22 +15,25 @@
   cursor: pointer;
 }
 
-.topUL li:hover ul {
- display: block;
- background-color: var(--primary-color);
- color: var(--font-color);
- border: none;
- box-shadow: 0 0 0.5rem 0.1rem var(--shadow-color);
- border-radius: 10px;
- padding: 15px;
+.topUL p {
+  display: block;
+  color: var(--info-color);
 }
 
-.topUL li ul li {
+.topUL li:hover {
+color: var(--info-color);
+ }
+
+.topUL li:hover .bottomUL {
   display: block;
-  width: 100%;
+  background-color: var(--font-color);
+  color: var(--info-color);
+  border-radius: 10px;
   padding: 10px;
-  border-bottom: 1px solid var(--info-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
+
 .bottomUL {
   display: none;
   position: absolute;
@@ -34,12 +42,5 @@
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.bottomUL li {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border-bottom: 1px solid var(--info-color);
-  cursor: pointer;
+  color: var(--font-color);
 }
