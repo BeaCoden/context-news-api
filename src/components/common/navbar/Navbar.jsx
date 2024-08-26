@@ -6,7 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className={styles.container}>
+    <div>
       <ul className={styles.topUL}>
         <li>
           <p>Categories</p>
@@ -18,11 +18,11 @@ const Navbar = () => {
             <li onClick={() => navigate("/categories", { state: { category: "science" } })}>Science</li>
           </ul>
         </li>
-        <li>
-          <p>Updates</p>
-          <ul className={styles.bottomUL}>
-            <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>Newsletter</li>
-          </ul>
+        <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>
+          <p>Newsletter</p>
+        </li>
+        <li onClick={() => navigate("/weather", { state: { category: "weather" } })}>
+          <p>Weather</p>
         </li>
       </ul>
     </div>
