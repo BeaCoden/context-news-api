@@ -26,27 +26,28 @@ body {
 }
 
 :root {
-  --primary-color: #435585; /* Hauptfarbe für wichtige Elemente */
-  --secondary-color: #818fb4; /* Sekundärfarbe für ergänzende Elemente */
-  --background-color: #f5eded; /* Hintergrundfarbe */
-  --font-color: #e2dad6; /* Textfarbe */
+  --primary-color: #435585;
+  --secondary-color: #818fb4;
+  --background-color: #ccc1bc;
+  --font-color: #e2dad6;
 
-  --detail-color: #7fa1c3; /* Detailfarbe für kleinere Akzente */
-  --hover-color: #6482ad; /* Hover-Effekt für Buttons und Links */
-  --info-color: #e2dad6; /* Info-Boxen oder sekundäre Elemente */
+  --detail-color: #7fa1c3;
+  --hover-color: #6482ad;
+  --info-color: #e2dad6;
 
-  --navbar-bg-color: #435585; /* Hintergrundfarbe der Navigationsleiste */
-  --dropdown-bg-color: #363062; /* Hintergrundfarbe der Dropdown-Menüs */
-  --dropdown-font-color: #e2dad6; /* Textfarbe der Dropdown-Menüs */
+  --navbar-bg-color: #435585;
+  --dropdown-bg-color: #363062;
+  --dropdown-font-color: #e2dad6;
 
-  --button-bg-color: #435585; /* Button-Hintergrundfarbe */
-  --button-font-color: #e2dad6; /* Button-Textfarbe */
-  --button-hover-bg-color: #7fa1c3; /* Button-Hintergrundfarbe bei Hover */
+  --button-bg-color: #435585;
+  --button-font-color: #e2dad6;
+  --button-hover-bg-color: #7fa1c3;
+  --button-hover-font-color: #435585;
 
-  --footer-bg-color: #435585; /* Hintergrundfarbe des Footers */
-  --footer-font-color: #e2dad6; /* Textfarbe im Footer */
+  --footer-bg-color: #435585;
+  --footer-font-color: #e2dad6;
 
-  --shadow-color: rgba(54, 48, 98, 0.1); /* Schattenfarbe für Tiefenwirkung */
+  --shadow-color: rgba(54, 48, 98, 0.1);
 }
 
 

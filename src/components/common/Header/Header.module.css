@@ -21,6 +21,7 @@
   font-size: 2.5rem;
   color: var(--font-color);
   cursor: pointer;
+  text-shadow: var();
 }
 
 /* .errorImage {
@@ -42,15 +43,16 @@ form {
   gap: 10px;
   padding: 15px;
   border-radius: 10px;
-  border: 2px solid var(--info-color);
+  border: 2px solid var(--detail-color);
 }
 
 button {
-  padding: 10px;
-  border: 2px solid var(--info-color);
+  border: none;
   border-radius: 10px;
-  background-color: var(--detail-color);
+  background-color: transparent;
   cursor: pointer;
+  padding: 0 10px;
+  font-size: large;
 }
 
 .input-wrapper {
@@ -69,22 +71,4 @@ button {
   top: 0;
   height: 100%;
   border-left: 0;
-}
-
-
-@-webkit-keyframes text-shadow-drop-tl {
-  0% {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
-  }
-}
-@keyframes text-shadow-drop-tl {
-  0% {
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  100% {
-    text-shadow: -6px -6px 18px rgba(0, 0, 0, 0.35);
-  }
 }

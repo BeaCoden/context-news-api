@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  text-align: center;
+  padding: 20px;
+}
+
+.errorContent {
+  max-width: 600px;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--detail-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.errorVisual {
+  position: relative;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.moon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--info-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 40px);
+  box-shadow: 0 0 30px rgba(245, 232, 199, 0.495);
+  z-index: 1;
+}
+
+.astronaut {
+  width: 70px;
+  height: 70px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  left: calc(50% - 35px);
+  animation: floatAstronaut 10s infinite ease-in-out;
+  z-index: 2;
+}
+
+.errorTitle {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--font-color);
+}
+
+.errorMessage {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--font-color);
+}
+
+.homeLink {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--button-bg-color);
+  color: var(--button-font-color);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.homeLink:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-font-color);
+}
+
+
+@keyframes floatAstronaut {
+  0% {
+    transform: translateY(50px);
+}
+  50% {
+    transform: translateY(-30px);
+}
+  100% {
+    transform: translateY(50px);
+}
+}

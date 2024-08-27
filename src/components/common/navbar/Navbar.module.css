@@ -1,9 +1,7 @@
-
-
 .topUL {
   list-style: none;
   display: flex;
-  gap: 20px; /* Space between menu items */
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -14,6 +12,8 @@
 }
 
 .topUL > li > p {
+  position: relative;
+  display: inline-block;
   margin: 0;
   padding: 10px 15px;
   color: var(--font-color);
@@ -21,22 +21,38 @@
 }
 
 .topUL > li:hover > p {
-  background-color: var(--highlight-color); /* Highlight on hover */
   border-radius: 5px;
 }
 
-.bottomUL {
-  display: none; /* Hide dropdown initially */
+.topUL > li > p::after {
+  content: '';
   position: absolute;
-  top: 100%; /* Aligns dropdown just below the parent */
   left: 0;
-  background-color: var(--primary-color); /* Same as the navbar background */
-  border: 1px solid var(--info-color);
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--detail-color);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.topUL > li:hover > p::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.bottomUL {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+  border: none;
   border-radius: 5px;
   list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  width: 150px; /* Adjust the width as needed */
+  margin: 5px 0 0 0;
+  width: 150px;
 }
 
 .bottomUL > li {
@@ -45,10 +61,11 @@
 }
 
 .bottomUL > li:hover {
-  background-color: var(--highlight-color); /* Highlight each dropdown item on hover */
+  background-color: var(--detail-color);
   border-radius: 5px;
+  color: var(--primary-color);
 }
 
 .topUL > li:hover .bottomUL {
-  display: block; /* Show dropdown when hovering over the parent item */
+  display: block;
 }
