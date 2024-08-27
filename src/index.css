@@ -49,18 +49,3 @@ body {
 
   --shadow-color: rgba(54, 48, 98, 0.1);
 }
-
-
-/* :root {
-  --background-color: #d5bdaf;
-  --primary-color: #e3d5ca;
-  --secondary-color: #f5ebe0;
-  --detail-color:#d6ccc2;
-  --hover-color:#edede9;
-  --info-color: #669bbc;
-  --font-color: #0c4f78;
-  --dropdown-bg-color: #004d73;
-  --hover-bg-color: #007ba7;
-  --navbar-bg-color: #004d73;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-} */

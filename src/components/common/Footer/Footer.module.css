@@ -1,7 +1,6 @@
-
 .footer {
   position: fixed;
-  bottom: 0;
+  bottom: -60px;
   left: 0;
   width: 100%;
   background-color: var(--footer-bg-color);
@@ -11,10 +10,29 @@
   border-top: var(--detail-color) 3px solid;
   font-size: 0.8rem;
   color: var(--footer-font-color);
+  transition: bottom 0.5s ease-in-out;
 }
 
-.footer p {
-  margin: 5px 0;
+.footer.visible {
+  bottom: 0;
+}
+
+.toggleButton {
+  position: fixed;
+  bottom: 10px;
+  left: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+  border-radius: 50px;
+  color: var(--button-font-color);
+  font-size: small;
+}
+
+.toggleButton:hover {
+  background-color: transparent;
 }
 
 .footer ul {
@@ -27,6 +45,10 @@
 
 .footer li {
   margin: 0 15px;
+}
+
+.footer p {
+  margin: 5px 0;
 }
 
 .footer a {
