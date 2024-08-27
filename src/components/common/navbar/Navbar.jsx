@@ -18,11 +18,14 @@ const Navbar = () => {
             <li onClick={() => navigate("/categories", { state: { category: "science" } })}>Science</li>
           </ul>
         </li>
+        <li onClick={() => navigate("/weather", { state: { category: "weather" } })}>
+          <p>Weather</p>
+        </li>
         <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>
           <p>Newsletter</p>
         </li>
-        <li onClick={() => navigate("/weather", { state: { category: "weather" } })}>
-          <p>Weather</p>
+        <li onClick={() => navigate("/")}>
+          <p>Home</p>
         </li>
       </ul>
     </div>
