@@ -22,38 +22,66 @@
   position: relative;
   height: 150px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourLeft, .fourRight {
+  font-size: 5rem;
+  font-weight: bold;
+  color: whitesmoke;
+  position: relative;
+  display: inline-block;
+  text-shadow: 0 0 30px rgba(245, 232, 199, 0.495);
+}
+
+.fourLeft {
+  margin-right: 50px; /* Abstand zum Mond */
+  padding-bottom: 10px;
+  z-index: 10;
+}
+
+.fourRight {
+  margin-left: 50px; /* Abstand zum Mond */
+  padding-bottom: 10px;
+  z-index: 10;
 }
 
 .moon {
   width: 80px;
   height: 80px;
-  background-color: var(--info-color);
+  background: radial-gradient(circle, #f0f0f0 20%, #f0f0f0 60%, #cccccc 80%, #e7e3e3 100%);
   border-radius: 50%;
   position: absolute;
-  top: 20px;
-  left: calc(50% - 40px);
-  box-shadow: 0 0 30px rgba(245, 232, 199, 0.495);
+  box-shadow: 0 0 30px rgba(245, 232, 199, 0.7), inset 0 0 8px rgba(255, 255, 255, 0);
   z-index: 1;
 }
 
 .emoji {
-  font-size: 40px; /* Größe der Emojis anpassen */
+  font-size: 30px;
   position: absolute;
+  z-index: 3;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
 }
 
-/* Animation für das Raumschiff (🚀) */
 .rocket {
-  animation: floatRocket 10s infinite ease-in-out;
+  animation: floatRocket 25s infinite ease-in-out;
+  left: -10%; /* Startposition außerhalb des linken Bildschirmrandes */
+  top: 110%;  /* Startposition außerhalb des unteren Bildschirmrandes */
 }
 
-/* Animation für den Satelliten (🛰️) */
 .satellite {
-  animation: floatSatellite 12s infinite ease-in-out;
+  animation: floatSatellite 18s infinite ease-in-out;
+  left: 10%; /* Startposition außerhalb des rechten Bildschirmrandes */
+  top:-25%;  /* Startposition außerhalb des unteren Bildschirmrandes */
 }
 
-/* Animation für den Planeten Erde (🌏) */
 .earth {
-  animation: floatEarth 8s infinite ease-in-out;
+  animation: floatEarth 20s infinite ease-in-out;
+  left: -10%; /* Startposition außerhalb des linken Bildschirmrandes */
+  top: -10%; /* Startposition außerhalb des oberen Bildschirmrandes */
 }
 
 .stars {
@@ -95,65 +123,64 @@
   color: var(--button-hover-font-color);
 }
 
-/* Keyframes für das Raumschiff (🚀) */
 @keyframes floatRocket {
   0% {
-    transform: translate(0, 0); /* Startpunkt: Unten rechts */
-    bottom: 0;
-    right: 0;
-  }
-  25% {
-    transform: translate(-50px, -100px); /* Bewegung nach oben links */
+    opacity: 0;
+    transform: translate(-90vw, 90vh) rotate(0deg);
+}
+  10% {
+    opacity: 1; /* Sanftes Erscheinen */
   }
   50% {
-    transform: translate(-100px, -200px); /* Weiter nach oben links */
-  }
-  75% {
-    transform: translate(50px, 100px); /* Zurück nach unten rechts auf einer anderen Achse */
+    transform: translate(75vw, -50vh) rotate(0deg);
+}
+  90% {
+    opacity: 1; /* Sanftes Verschwinden */
   }
   100% {
-    transform: translate(0, 0); /* Zurück zum Startpunkt */
-  }
+    opacity: 0;
+    transform: translate(-150vw, 150vh) rotate(-30deg);
+}
 }
 
 /* Keyframes für den Satelliten (🛰️) */
 @keyframes floatSatellite {
   0% {
-    transform: translate(0, 0); /* Startpunkt: Unten links */
-    bottom: 0;
-    left: 0;
+    opacity: 0;
+    transform: translate(110vw, 110vh) rotate(0deg); /* Start außerhalb des Bildschirms */
   }
-  25% {
-    transform: translate(50px, -100px); /* Bewegung nach oben rechts */
+  10% {
+    opacity: 1;
   }
   50% {
-    transform: translate(100px, -200px); /* Weiter nach oben rechts */
+    transform: translate(-50vw, -50vh) rotate(-45deg); /* Kurvige Bewegung durch den Bildschirm */
   }
-  75% {
-    transform: translate(-50px, 100px); /* Zurück nach unten links auf einer anderen Achse */
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 0); /* Zurück zum Startpunkt */
+    opacity: 0;
+    transform: translate(-10vw, -110vh) rotate(-90deg); /* Ende außerhalb des Bildschirms */
   }
 }
 
 /* Keyframes für die Erde (🌏) */
 @keyframes floatEarth {
   0% {
-    transform: translate(0, 0); /* Startpunkt: Oben rechts */
-    top: 0;
-    right: 0;
+    opacity: 0;
+    transform: translate(-10vw, -10vh) rotate(0deg); /* Start außerhalb des Bildschirms */
   }
-  25% {
-    transform: translate(-50px, 50px); /* Bewegung nach unten links */
+  10% {
+    opacity: 1;
   }
   50% {
-    transform: translate(-100px, 100px); /* Weiter nach unten links */
+    transform: translate(50vw, 50vh) rotate(30deg); /* Kurvige Bewegung durch den Bildschirm */
   }
-  75% {
-    transform: translate(50px, -50px); /* Zurück nach oben rechts auf einer anderen Achse */
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 0); /* Zurück zum Startpunkt */
+    opacity: 0;
+    transform: translate(110vw, 110vh) rotate(60deg); /* Ende außerhalb des Bildschirms */
   }
 }
