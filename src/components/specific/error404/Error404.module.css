@@ -36,7 +36,7 @@
   z-index: 1;
 }
 
-.planet {
+/* .planet {
   width: 70px;
   height: 70px;
  background: url(
@@ -48,6 +48,26 @@
   left: calc(50% - 35px);
   animation: floatDiagonal 10s infinite ease-in-out;
   z-index: 2;
+} */
+
+.emoji {
+  font-size: 40px; /* Größe der Emojis anpassen */
+  position: absolute;
+}
+
+/* Animation für das Raumschiff (🚀) */
+.rocket {
+  animation: floatRocket 10s infinite ease-in-out;
+}
+
+/* Animation für den Satelliten (🛰️) */
+.satellite {
+  animation: floatSatellite 12s infinite ease-in-out;
+}
+
+/* Animation für den Planeten Erde (🌏) */
+.earth {
+  animation: floatEarth 8s infinite ease-in-out;
 }
 
 .stars {
@@ -91,18 +111,64 @@
 }
 
 
-@keyframes floatDiagonal {
+
+/* Keyframes für das Raumschiff (🚀) */
+@keyframes floatRocket {
   0% {
     transform: translate(0, 0); /* Startpunkt: Unten rechts */
+    bottom: 0;
+    right: 0;
   }
   25% {
-    transform: translate(-100px, -150px); /* Bewegung nach oben links */
+    transform: translate(-50px, -100px); /* Bewegung nach oben links */
   }
   50% {
-    transform: translate(-200px, -300px); /* Weiter nach oben links */
+    transform: translate(-100px, -200px); /* Weiter nach oben links */
   }
   75% {
-    transform: translate(100px, 150px); /* Zurück nach unten rechts auf einer anderen Achse */
+    transform: translate(50px, 100px); /* Zurück nach unten rechts auf einer anderen Achse */
+  }
+  100% {
+    transform: translate(0, 0); /* Zurück zum Startpunkt */
+  }
+}
+
+/* Keyframes für den Satelliten (🛰️) */
+@keyframes floatSatellite {
+  0% {
+    transform: translate(0, 0); /* Startpunkt: Unten links */
+    bottom: 0;
+    left: 0;
+  }
+  25% {
+    transform: translate(50px, -100px); /* Bewegung nach oben rechts */
+  }
+  50% {
+    transform: translate(100px, -200px); /* Weiter nach oben rechts */
+  }
+  75% {
+    transform: translate(-50px, 100px); /* Zurück nach unten links auf einer anderen Achse */
+  }
+  100% {
+    transform: translate(0, 0); /* Zurück zum Startpunkt */
+  }
+}
+
+/* Keyframes für die Erde (🌏) */
+@keyframes floatEarth {
+  0% {
+    transform: translate(0, 0); /* Startpunkt: Oben rechts */
+    top: 0;
+    right: 0;
+  }
+  25% {
+    transform: translate(-50px, 50px); /* Bewegung nach unten links */
+  }
+  50% {
+    transform: translate(-100px, 100px); /* Weiter nach unten links */
+  }
+  75% {
+    transform: translate(50px, -50px); /* Zurück nach oben rechts auf einer anderen Achse */
   }
   100% {
     transform: translate(0, 0); /* Zurück zum Startpunkt */

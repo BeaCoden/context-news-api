@@ -8,7 +8,9 @@ const Error404 = () => {
       <div className={styles.errorContent}>
         <div className={styles.errorVisual}>
           <div className={styles.moon}></div>
-          <div className={styles.planet}></div>
+          <div className={`${styles.emoji} ${styles.rocket}`}>🚀</div>
+          <div className={`${styles.emoji} ${styles.satellite}`}>🛰️</div>
+          <div className={`${styles.emoji} ${styles.earth}`}>🌏</div>
           <div className={styles.stars}></div>
         </div>
         <h4 className={styles.errorTitle}>404 - Lost in Space</h4>
