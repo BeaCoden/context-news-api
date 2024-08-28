@@ -63,25 +63,25 @@
   position: absolute;
   z-index: 3;
   opacity: 0;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .rocket {
-  animation: floatRocket 25s infinite ease-in-out;
-  left: -10%; /* Startposition außerhalb des linken Bildschirmrandes */
-  top: 110%;  /* Startposition außerhalb des unteren Bildschirmrandes */
+  animation: floatRocket 25s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  left: -10%;
+  bottom: -20%;
 }
 
 .satellite {
-  animation: floatSatellite 18s infinite ease-in-out;
-  left: 10%; /* Startposition außerhalb des rechten Bildschirmrandes */
-  top:-25%;  /* Startposition außerhalb des unteren Bildschirmrandes */
+  animation: floatSatellite 18s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  right: -15%;
+  top: -15%;
 }
 
 .earth {
-  animation: floatEarth 20s infinite ease-in-out;
-  left: -10%; /* Startposition außerhalb des linken Bildschirmrandes */
-  top: -10%; /* Startposition außerhalb des oberen Bildschirmrandes */
+  animation: floatEarth 20s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  left: -15%;
+  top: -15%;
 }
 
 .stars {
@@ -126,61 +126,59 @@
 @keyframes floatRocket {
   0% {
     opacity: 0;
-    transform: translate(-90vw, 90vh) rotate(0deg);
-}
-  10% {
-    opacity: 1; /* Sanftes Erscheinen */
+    transform: translate(-120vw, 120vh) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
   }
   50% {
-    transform: translate(75vw, -50vh) rotate(0deg);
+    transform: translate(50vw, -50vh) rotate(0deg);
 }
-  90% {
-    opacity: 1; /* Sanftes Verschwinden */
+  85% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(-150vw, 150vh) rotate(-30deg);
-}
+    transform: translate(200vw, -200vh) rotate(90deg);
+  }
 }
 
-/* Keyframes für den Satelliten (🛰️) */
+
 @keyframes floatSatellite {
   0% {
     opacity: 0;
-    transform: translate(110vw, 110vh) rotate(0deg); /* Start außerhalb des Bildschirms */
+    transform: translate(120vw, -120vh) rotate(0deg); /* Start außerhalb des Bildschirms rechts oben */
   }
-  10% {
+  15% {
     opacity: 1;
   }
   50% {
-    transform: translate(-50vw, -50vh) rotate(-45deg); /* Kurvige Bewegung durch den Bildschirm */
-  }
-  90% {
+    transform: translate(-10vw, 50vh) rotate(-45deg);
+}
+  85% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(-10vw, -110vh) rotate(-90deg); /* Ende außerhalb des Bildschirms */
-  }
+    transform: translate(-200vw, -10vh) rotate(-90deg);
+}
 }
 
 /* Keyframes für die Erde (🌏) */
 @keyframes floatEarth {
   0% {
     opacity: 0;
-    transform: translate(-10vw, -10vh) rotate(0deg); /* Start außerhalb des Bildschirms */
+    transform: translate(-120vw, -120vh) rotate(0deg);
   }
-  10% {
+  15% {
     opacity: 1;
   }
   50% {
-    transform: translate(50vw, 50vh) rotate(30deg); /* Kurvige Bewegung durch den Bildschirm */
+    transform: translate(50vw, 50vh) rotate(30deg);
   }
-  90% {
-    opacity: 1;
-  }
+
   100% {
     opacity: 0;
-    transform: translate(110vw, 110vh) rotate(60deg); /* Ende außerhalb des Bildschirms */
+    transform: translate(200vw, 200vh) rotate(60deg); /* Ende außerhalb des Bildschirms rechts unten */
   }
 }
