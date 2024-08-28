@@ -23,6 +23,7 @@ code {
 body {
   background-color: var(--background-color);
   color: var(--font-color);
+  font-size: 20px;
 }
 
 :root {
