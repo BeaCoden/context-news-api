@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const Search = () => {
   const [news, setNews] = useState([]);
-  const [error, setError] = useState(null); // State für Fehlermeldungen
+  const [error, setError] = useState(null);
   const { state } = useLocation();
 
   const apiKey = process.env.REACT_APP_API_KEY;
@@ -20,14 +20,14 @@ const Search = () => {
       })
       .then((data) => {
         if (data.articles.length === 0) {
-          setError("Keine Nachrichten gefunden. Bitte überprüfen Sie Ihre Eingabe.");
+          setError("No messages found. Please check your input.");
         } else {
           setNews(data.articles);
-          setError(null); // Reset error if data is found
+          setError(null);
         }
       })
       .catch((error) => {
-        setError("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
+        setError("An error has occurred. Please try again later.");
         console.error(error);
       });
   }, [url]);

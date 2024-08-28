@@ -30,23 +30,36 @@
   background-color: var(--info-color);
   border-radius: 50%;
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: calc(50% - 40px);
   box-shadow: 0 0 30px rgba(245, 232, 199, 0.495);
   z-index: 1;
 }
 
-.astronaut {
+.planet {
   width: 70px;
   height: 70px;
-  background-color: var(--secondary-color);
-  border-radius: 50%;
+ background: url(
+    'data:image/svg+xml,%3Csvg xmlns%3D"http%3A//www.w3.org/2000/svg" width%3D"50" height%3D"50" viewBox%3D"0 0 50 50"%3E%3Cg fill%3D"%23f5e8c7"%3E%3Ccircle cx%3D"50" cy%3D"50" r%3D"40"/%3E%3C/g%3E%3C/svg%3E'
+  ) no-repeat center center;
+  background-size: 70px;
   position: absolute;
-  top: 45px;
+  top: 25px;
   left: calc(50% - 35px);
-  animation: floatAstronaut 10s infinite ease-in-out;
+  animation: floatDiagonal 10s infinite ease-in-out;
   z-index: 2;
 }
+
+.stars {
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,%3Csvg xmlns%3D"http%3A//www.w3.org/2000/svg" width%3D"100" height%3D"100" viewBox%3D"0 0 100 100"%3E%3Cg fill%3D"%23ffffff"%3E%3Ccircle cx%3D"25" cy%3D"25" r%3D"1.5"/%3E%3Ccircle cx%3D"50" cy%3D"10" r%3D"1"/%3E%3Ccircle cx%3D"75" cy%3D"50" r%3D"1.5"/%3E%3Ccircle cx%3D"10" cy%3D"75" r%3D"1"/%3E%3Ccircle cx%3D"50" cy%3D"75" r%3D"1"/%3E%3Ccircle cx%3D"90" cy%3D"90" r%3D"1.5"/%3E%3Ccircle cx%3D"75" cy%3D"75" r%3D"1"/%3E%3Ccircle cx%3D"20" cy%3D"80" r%3D"1.5"/%3E%3C/g%3E%3C/svg%3E') repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 
 .errorTitle {
   font-size: 1rem;
@@ -55,7 +68,7 @@
 }
 
 .errorMessage {
-  font-size: 18px;
+  font-size: .75rem;
   margin-bottom: 10px;
   color: var(--font-color);
 }
@@ -68,6 +81,7 @@
   color: var(--button-font-color);
   border-radius: 10px;
   text-decoration: none;
+  font-size: .75rem;
   transition: background-color 0.3s ease;
 }
 
@@ -77,14 +91,20 @@
 }
 
 
-@keyframes floatAstronaut {
+@keyframes floatDiagonal {
   0% {
-    transform: translateY(50px);
-}
+    transform: translate(0, 0); /* Startpunkt: Unten rechts */
+  }
+  25% {
+    transform: translate(-100px, -150px); /* Bewegung nach oben links */
+  }
   50% {
-    transform: translateY(-30px);
-}
+    transform: translate(-200px, -300px); /* Weiter nach oben links */
+  }
+  75% {
+    transform: translate(100px, 150px); /* Zurück nach unten rechts auf einer anderen Achse */
+  }
   100% {
-    transform: translateY(50px);
-}
+    transform: translate(0, 0); /* Zurück zum Startpunkt */
+  }
 }

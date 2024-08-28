@@ -8,18 +8,16 @@ const Error404 = () => {
       <div className={styles.errorContent}>
         <div className={styles.errorVisual}>
           <div className={styles.moon}></div>
-          <div className={styles.astronaut}></div>
+          <div className={styles.planet}></div>
           <div className={styles.stars}></div>
         </div>
         <h4 className={styles.errorTitle}>404 - Lost in Space</h4>
-        <p className={styles.errorMessage}>
-          <br /> Oh nein! Du scheinst im Weltall gestrandet zu sein.
-        </p>
-        <p className={styles.errorMessage}>Keine Sorge, wir helfen dir, den Weg zurück zur Erde zu finden.</p>
+        <p className={styles.errorMessage}>Oh no! You seem to be stranded in space.</p>
+        <p className={styles.errorMessage}>The page you are looking for does not exist. Please try another page.</p>
         <Link
           to="/"
           className={styles.homeLink}>
-          Zurück zur Startseite
+          back to Earth
         </Link>
       </div>
     </div>
