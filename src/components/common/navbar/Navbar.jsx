@@ -8,6 +8,9 @@ const Navbar = () => {
   return (
     <div>
       <ul className={styles.topUL}>
+        <li onClick={() => navigate("/")}>
+          <p>Home</p>
+        </li>
         <li>
           <p>Categories</p>
           <ul className={styles.bottomUL}>
@@ -21,11 +24,8 @@ const Navbar = () => {
         <li onClick={() => navigate("/weather", { state: { category: "weather" } })}>
           <p>Weather</p>
         </li>
-        <li onClick={() => navigate("/newsletter", { state: { category: "newsletter" } })}>
-          <p>Newsletter</p>
-        </li>
-        <li onClick={() => navigate("/")}>
-          <p>Home</p>
+        <li onClick={() => navigate("/userSettings", { state: { category: "userSettings" } })}>
+          <p>Settings</p>
         </li>
       </ul>
     </div>

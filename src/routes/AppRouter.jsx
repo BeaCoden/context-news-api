@@ -6,8 +6,8 @@ import About from "../pages/about/About";
 import Categories from "../pages/categories/Categories";
 import Contact from "../pages/contact/Contact";
 import Search from "../pages/search/Search";
-import Newsletter from "../pages/newsletter/Newsletter";
 import Weather from "../pages/weather/Weather";
+import UserSettings from "../pages/userSettings/UserSettings";
 
 const AppRouter = () => {
   return (
@@ -36,8 +36,8 @@ const AppRouter = () => {
             element={<Search />}
           />
           <Route
-            path="/newsletter"
-            element={<Newsletter />}
+            path="/userSettings"
+            element={<UserSettings />}
           />
           <Route
             path="/weather"

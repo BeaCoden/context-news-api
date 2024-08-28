@@ -18,7 +18,7 @@ const Footer = () => {
       </button>
       <footer className={`${styles.footer} ${isFooterVisible ? styles.visible : ""}`}>
         <p>
-          <small>© 2021. All rights reserved</small>
+          <small>© 2024 by BeaCoden | All rights reserved</small>
         </p>
         <ul>
           <li>

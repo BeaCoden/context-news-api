@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./Search.module.css";
+import { useLocation } from "react-router-dom";
 
 const Search = () => {
+  const { state } = useLocation();
+  console.log(state);
   return (
     <div className={styles.search}>
-      <h2>Search</h2>
-      <input
-        type="text"
-        placeholder="Search..."
-      />
-      <button>Search</button>
+      <h1>
+        News about:
+        <span>{}</span>
+      </h1>
+      <div></div>
     </div>
   );
 };
