@@ -6,7 +6,6 @@
   font-size: 2rem;
   margin-bottom: 20px;
   color: var(--primary-color);
-
 }
 
 .search p {
@@ -56,4 +55,14 @@
   color: var(--secondary-color);
   font-weight: bold;
   font-size: .75rem;
+}
+
+/* Fehlernachricht Stil */
+.error {
+  background-color: #ffcccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  color: #cc0000;
 }
