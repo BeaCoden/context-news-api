@@ -30,36 +30,35 @@
 .fourLeft, .fourRight {
   font-size: 5rem;
   font-weight: bold;
-  color: whitesmoke;
+  color: var(--font-color);
   position: relative;
   display: inline-block;
-  text-shadow: 0 0 30px rgba(245, 232, 199, 0.495);
+  text-shadow: 0 0 30px var(--shadow-color);
 }
 
 .fourLeft {
-  margin-right: 50px; /* Abstand zum Mond */
+  margin-right: 50px;
   padding-bottom: 10px;
   z-index: 10;
 }
 
 .fourRight {
-  margin-left: 50px; /* Abstand zum Mond */
+  margin-left: 50px;
   padding-bottom: 10px;
   z-index: 10;
 }
 
 .moon {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   background: radial-gradient(circle, #f0f0f0 20%, #f0f0f0 60%, #cccccc 80%, #e7e3e3 100%);
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0 0 30px rgba(245, 232, 199, 0.7), inset 0 0 8px rgba(255, 255, 255, 0);
+  box-shadow: 0 0 30px var(--font-color), inset 0 0 8px rgba(255, 255, 255, 0);
   z-index: 1;
 }
 
 .emoji {
-  font-size: 30px;
   position: absolute;
   z-index: 3;
   opacity: 0;
@@ -68,18 +67,21 @@
 
 .rocket {
   animation: floatRocket 25s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  font-size: 2.5rem;
   left: -10%;
   bottom: -20%;
 }
 
 .satellite {
   animation: floatSatellite 18s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  font-size: 5.25rem;
   right: -15%;
   top: -15%;
 }
 
 .earth {
   animation: floatEarth 20s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  font-size: 2rem;
   left: -15%;
   top: -15%;
 }
@@ -143,11 +145,10 @@
   }
 }
 
-
 @keyframes floatSatellite {
   0% {
     opacity: 0;
-    transform: translate(120vw, -120vh) rotate(0deg); /* Start außerhalb des Bildschirms rechts oben */
+    transform: translate(120vw, -120vh) rotate(0deg);
   }
   15% {
     opacity: 1;
@@ -164,21 +165,20 @@
 }
 }
 
-/* Keyframes für die Erde (🌏) */
 @keyframes floatEarth {
   0% {
     opacity: 0;
-    transform: translate(-120vw, -120vh) rotate(0deg);
-  }
+    transform: translate(-120vw, -120vh) rotate(-20deg);
+}
   15% {
     opacity: 1;
   }
   50% {
-    transform: translate(50vw, 50vh) rotate(30deg);
-  }
-
+    transform: translate(50vw, 50vh) rotate(50deg);
+    opacity: 1;
+}
   100% {
     opacity: 0;
-    transform: translate(200vw, 200vh) rotate(60deg); /* Ende außerhalb des Bildschirms rechts unten */
-  }
+    transform: translate(200vw, 200vh) rotate(10deg);
+}
 }
