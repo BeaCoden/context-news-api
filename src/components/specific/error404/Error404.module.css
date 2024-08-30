@@ -123,6 +123,7 @@
   text-decoration: none;
   font-size: .75rem;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .homeLink:hover {
