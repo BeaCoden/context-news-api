@@ -1,11 +1,22 @@
 import React from "react";
 import styles from "./NewsCard.module.css";
 
-const NewsCard = () => {
+const NewsCard = ({ title, description, imageUrl, url }) => {
   return (
     <div className={styles.newsCard}>
-      <h2>News Title</h2>
-      <p>News content</p>
+      <img
+        src={imageUrl}
+        alt={title}
+        className={styles.image}
+      />
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer">
+        Read more ➡️
+      </a>
     </div>
   );
 };

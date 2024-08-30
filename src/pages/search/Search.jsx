@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Search.module.css";
 import { useLocation } from "react-router-dom";
+import NewsCard from "../../components/specific/newsCard/NewsCard";
 
 const Search = () => {
   const [news, setNews] = useState([]);
@@ -32,8 +33,6 @@ const Search = () => {
       });
   }, [url]);
 
-  console.log(news);
-
   return (
     <div className={styles.search}>
       <p>
@@ -48,24 +47,13 @@ const Search = () => {
       ) : (
         <div className={styles.newsGrid}>
           {news.map((article, index) => (
-            <div
+            <NewsCard
               key={index}
-              className={styles.newsItem}>
-              <h2>
-                <em>{article.title}</em>
-              </h2>
-              <img
-                src={article.urlToImage}
-                alt={article.title}
-              />
-              <p>{article.description}</p>
-              <a
-                href={article.url}
-                target="_blank"
-                rel="noopener noreferrer">
-                Read more ➡️
-              </a>
-            </div>
+              title={article.title}
+              description={article.description}
+              imageUrl={article.urlToImage}
+              url={article.url}
+            />
           ))}
         </div>
       )}
