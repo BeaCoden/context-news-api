@@ -17,16 +17,29 @@ const Search = () => {
       <p>
         <em>Showing news for:</em>
       </p>
-      <h1>{state}</h1>
+      <h1>{state || "All News"}</h1>
 
       {error ? (
         <div className={styles.error}>
-          <p>{error}</p>
-          <button onClick={() => window.location.reload()}>Try Again</button>
+          <p>
+            We couldn't find any articles <br /> matching your search.
+          </p>
+          <div className={styles.buttonContainer}>
+            <a
+              className={styles.button}
+              href="/categories">
+              search in categories
+            </a>
+            <button
+              className={styles.button}
+              onClick={() => (window.location.href = "/")}>
+              back Home
+            </button>
+          </div>
         </div>
       ) : !news.length ? (
         <div className={styles.loading}>
-          <p>Loading...</p>
+          <p>Loading news articles...</p>
         </div>
       ) : (
         <div className={styles.newsGrid}>
