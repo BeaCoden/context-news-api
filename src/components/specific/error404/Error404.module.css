@@ -13,7 +13,6 @@
 .errorContent {
   width: 90vw;
   height: auto;
-
   padding: 20px;
   background-color: var(--secondary-color);
   border: 1px solid var(--detail-color);
@@ -23,7 +22,7 @@
 
 .errorVisual {
   position: relative;
-  height: 150px;
+  height: 250px;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -71,21 +70,21 @@
 }
 
 .rocket {
-  animation: floatRocket 25s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  animation: floatRocket 30s infinite cubic-bezier(0.42, 0, 0.58, 1); /* Slower rocket animation */
   font-size: 2.5rem;
   left: -5%;
   bottom: -10%;
 }
 
 .satellite {
-  animation: floatSatellite 18s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  animation: floatSatellite 16s infinite cubic-bezier(0.42, 0, 0.58, 1); /* Slower satellite animation */
   font-size: 5.25rem;
   right: -10%;
   top: -10%;
 }
 
 .earth {
-  animation: floatEarth 20s infinite cubic-bezier(0.42, 0, 0.58, 1);
+  animation: floatEarth 22s infinite cubic-bezier(0.42, 0, 0.58, 1); /* Slower earth animation */
   font-size: 2rem;
   left: -5%;
   top: -10%;
