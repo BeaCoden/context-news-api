@@ -10,6 +10,16 @@
   gap: 10px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.newsEarthGIF {
+  width: 100px;
+  height: auto;
+}
+
 .top {
   display: flex;
   align-items: center;
@@ -21,13 +31,8 @@
   font-size: 2.5rem;
   color: var(--font-color);
   cursor: pointer;
-  text-shadow: var();
+  text-shadow: 0px 1px 2px var(--shadow-color);
 }
-
-/* .errorImage {
-  width: 100px;
-  height: auto;
-} */
 
 form {
   display: flex;

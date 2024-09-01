@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import styles from "./Header.module.css";
+import newsEarth from "../../../assets/gifs/newsEarth.gif";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -15,16 +16,19 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      {/* <img
-        src="https://via.placeholder.com/150"
-        alt="404 illustration"
-        className={styles.errorImage}
-      /> */}
-      <h1
-        className={styles.heading}
-        onClick={() => navigate("/")}>
-        <em>news</em>
-      </h1>
+      <div className={styles.logo}>
+        <img
+          onClick={() => navigate("/")}
+          src={newsEarth}
+          alt="Globe"
+          className={styles.newsEarthGIF}
+        />
+        <h1
+          onClick={() => navigate("/")}
+          className={styles.heading}>
+          <em>news</em>
+        </h1>
+      </div>
       <div className={styles.top}>
         <form
           onSubmit={handleSubmit}
