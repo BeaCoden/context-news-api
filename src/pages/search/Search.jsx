@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "./Search.module.css";
 import { useLocation } from "react-router-dom";
 import NewsCard from "../../components/specific/newsCard/NewsCard";
@@ -9,9 +9,10 @@ const Search = () => {
   const { state } = useLocation();
   const [loading, setLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const prevQuery = useRef(state);
 
   const apiKey = process.env.REACT_APP_API_KEY;
-  const url = `https://newsapi.org/v2/top-headlines?q=${state}&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(state)}&apiKey=${apiKey}`;
 
   const { news, error } = useFetchNews(url);
 
@@ -19,7 +20,6 @@ const Search = () => {
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,6 +28,14 @@ const Search = () => {
       setShowContent(true);
     }
   }, [loading, news, error]);
+
+  useEffect(() => {
+    if (state !== prevQuery.current) {
+      setLoading(true);
+      setShowContent(false);
+      prevQuery.current = state;
+    }
+  }, [state]);
 
   return (
     <div className={styles.search}>
