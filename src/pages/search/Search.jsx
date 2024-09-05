@@ -8,7 +8,7 @@ import Spinner from "../../components/common/spinner/Spinner";
 const Search = () => {
   const { state } = useLocation();
   const [loading, setLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false); // Additional state to control content visibility
+  const [showContent, setShowContent] = useState(false);
 
   const apiKey = process.env.REACT_APP_API_KEY;
   const url = `https://newsapi.org/v2/top-headlines?q=${state}&apiKey=${apiKey}`;
@@ -16,16 +16,14 @@ const Search = () => {
   const { news, error } = useFetchNews(url);
 
   useEffect(() => {
-    // Start loading the data
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Delay for 3 seconds before showing content
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
-    // Show content after data is fetched and loading delay is over
     if (!loading && (news.length || error)) {
       setShowContent(true);
     }
