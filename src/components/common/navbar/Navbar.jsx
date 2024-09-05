@@ -22,11 +22,11 @@ const Navbar = () => {
           <p>Weather</p>
         </li>
         <li onClick={() => navigate("/userSettings", { state: { category: "userSettings" } })}>
-          <p>Settings</p>
+          <p>⚙️</p>
         </li>
-        <li onClick={() => navigate("/")}>
+        {/* <li onClick={() => navigate("/")}>
           <p>Home</p>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
