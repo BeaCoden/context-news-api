@@ -12,7 +12,7 @@ const Search = () => {
   const prevQuery = useRef(state);
 
   const apiKey = process.env.REACT_APP_API_KEY;
-  const url = `https://newsapi.org/v2/top-headlines?q=${encodeURIComponent(state)}&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/top-headlines?q=${state}&apiKey=${apiKey}`;
 
   const { news, error } = useFetchNews(url);
 
