@@ -30,12 +30,16 @@ const Home = () => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const sliderNews = news?.splice(0, 3);
+
   return (
     <div className={styles.container}>
       <div className={styles.slider}>
-        <Slider />
+        <Slider sliderNews={sliderNews} />
       </div>
-      <h1>News</h1>
+      <h1>
+        <span>Latest</span> News
+      </h1>
       <div className={styles.newsCard}>
         {loading ? (
           <Spinner />
@@ -45,7 +49,7 @@ const Home = () => {
               key={index}
               title={article.title}
               description={article.description}
-              imageUrl={article.urlToImage}
+              urlToImage={article.urlToImage}
               url={article.url}
             />
           ))
