@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./Home.module.css";
 import Footer from "../../components/common/footer/Footer";
 import Slider from "../../components/common/slider/Slider";
 import Spinner from "../../components/common/spinner/Spinner";
 import NewsCard from "../../components/specific/newsCard/NewsCard";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Home = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const theme = useContext(ThemeContext);
+  console.log(theme);
+
   const apiKey = process.env.REACT_APP_API_KEY;
   const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 
