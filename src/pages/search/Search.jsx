@@ -80,7 +80,7 @@ const Search = () => {
                   key={index}
                   title={article.title}
                   description={article.description}
-                  imageUrl={article.urlToImage}
+                  urlToImage={article.urlToImage}
                   url={article.url}
                 />
               ))}
