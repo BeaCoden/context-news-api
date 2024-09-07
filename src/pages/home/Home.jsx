@@ -40,7 +40,7 @@ const Home = () => {
       <h1>
         <span>Latest</span> News
       </h1>
-      <div className={styles.newsCard}>
+      <div className={styles.newsGrid}>
         {loading ? (
           <Spinner />
         ) : (

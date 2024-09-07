@@ -45,7 +45,7 @@ const Search = () => {
       </p>
       <h1>{state || "All News"}</h1>
 
-      <div className={styles.newsCard}>
+      <div>
         {loading ? (
           <div className={styles.loading}>
             <Spinner />
