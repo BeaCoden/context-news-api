@@ -18,6 +18,7 @@
   border: 1px solid var(--detail-color);
   border-radius: 8px;
   box-shadow: 0 4px 8px var(--shadow-color);
+  animation: fadeIn 1s ease-in-out;
 }
 
 .errorVisual {
@@ -186,4 +187,9 @@
     opacity: 0;
     transform: translate(100vw, 100vh) rotate(10deg);
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./UserSettings.module.css";
-import Error404 from "../../components/specific/error404/Error404";
 import Footer from "../../components/common/footer/Footer";
+import OnBuild from "../../components/specific/onBuild/OnBuild";
 
 const UserSettings = () => {
   return (
     <div className={styles.container}>
-      <Error404 />
+      <OnBuild />
       <Footer />
     </div>
   );
