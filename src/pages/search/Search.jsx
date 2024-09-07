@@ -26,6 +26,7 @@ const Search = () => {
   useEffect(() => {
     if (!loading && (news.length || error)) {
       setShowContent(true);
+      console.log("search news data:", news);
     }
   }, [loading, news, error]);
 

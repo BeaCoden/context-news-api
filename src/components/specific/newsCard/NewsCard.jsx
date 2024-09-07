@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./NewsCard.module.css";
+import noImage from "../../../assets/img/noImage.jpg";
 
 const NewsCard = ({ title, description, imageUrl, url }) => {
   return (
     <div className={styles.newsCard}>
-      <img
-        src={imageUrl}
-        alt={title}
-        className={styles.image}
-      />
+      <div>
+        <img
+          className={styles.image}
+          src={imageUrl ? imageUrl : noImage}
+          alt="news"
+        />
+      </div>
       <h2>{title}</h2>
       <p>{description}</p>
       <a
