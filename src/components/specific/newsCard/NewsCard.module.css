@@ -3,7 +3,11 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .newsCard:hover {
@@ -12,7 +16,8 @@
 
 .newsCard img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -24,14 +29,19 @@
 }
 
 .newsCard p {
-  font-size: .75rem;
+  font-size: 0.85rem;
   margin-bottom: 10px;
   color: var(--secondary-color);
 }
 
 .newsCard a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: bold;
-  font-size: .75rem;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.newsCard a:hover {
+  color: var(--hover-color);
 }

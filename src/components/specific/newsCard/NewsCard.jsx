@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./NewsCard.module.css";
 import noImage from "../../../assets/img/noImage.jpg";
 
-const NewsCard = ({ title, description, imageUrl, url }) => {
+const NewsCard = ({ title, description, urlToImage, url }) => {
   return (
     <div className={styles.newsCard}>
       <div>
         <img
           className={styles.image}
-          src={imageUrl ? imageUrl : noImage}
+          src={urlToImage ? urlToImage : noImage}
           alt="news"
         />
       </div>
