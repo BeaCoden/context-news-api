@@ -2,8 +2,12 @@
 
 Developed as part of a Udemy course, this project provides a simple way to retrieve and display news articles via the NewsAPI. It uses React to provide an interactive interface and Context API and hooks for state management and API interactions.
 
+## 🚀 Status
+> ongoing 🏗️🛠️
+
 ## 🔗 Demo
-🏗️ - ongoing -
+![image](https://github.com/user-attachments/assets/a61ac24f-ab63-47e5-8631-2fb32fbe6ad5)
+
 
 ## 🚀 Features
 
