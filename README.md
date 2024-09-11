@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# 📰 Context News API Project
+
+Developed as part of a Udemy course, this project provides a simple way to retrieve and display news articles via the NewsAPI. It uses React to provide an interactive interface and Context API and hooks for state management and API interactions.
+
+## 🔗 Demo
+🏗️ - ongoing -
+
+## 🚀 Features
+
+- Top News: Retrieve and display the latest news via NewsAPI.
+- Dark Mode: Implement a dark mode using useReducer and Context API.
+- Load and Update News: Users can manually load and update news.
+- Responsive Design: Clean and responsive design that works well on all screen sizes.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
